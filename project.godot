@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "NetworkGame",
+"language": "GDScript",
+"path": "res://addons/multiplayer/NetworkGame.gd"
+}, {
+"base": "Node",
+"class": "Sync",
+"language": "GDScript",
+"path": "res://addons/multiplayer/Sync.gd"
+} ]
+_global_script_class_icons={
+"NetworkGame": "",
+"Sync": ""
+}
+
+[application]
+
+config/name="MultiplayerTemplate"
+run/main_scene="res://game/game.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/multiplayer/plugin.cfg" )
+
+[global]
+
+main=false
+
+[physics]
+
+2d/default_gravity=0
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
